@@ -1,0 +1,238 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Global Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h1, h3 {
+    font-weight: 700;
+    color: #1A202C;
+}
+
+p {
+    color: #4A5568;
+    font-size: 1rem;
+}
+
+/* Form Section */
+#cv-form {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+}
+
+#cv-form h1 {
+    font-size: 2.8rem;
+    color: #3182ce;
+}
+
+#cv-form p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #1A202C;
+}
+
+.form-control {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #63B3ED;
+    box-shadow: 0 0 6px rgba(99, 179, 237, 0.6);
+}
+
+.btn-primary {
+    background-color: #63B3ED;
+    border-color: #63B3ED;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #3182ce;
+    border-color: #3182ce;
+}
+
+.btn-sm {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+}
+
+/* CV Template Styling */
+#cv-template {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.background {
+    background-color: #1A202C;
+    color: #f7fafc;
+}
+
+.myimg {
+    border-radius: 50%;
+    margin-bottom: 25px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+
+#cv-template h1 {
+    font-size: 2.8rem;
+    color: #3182ce;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.card-header {
+    background-color: #3182ce;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 12px;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-body {
+    background-color: #edf2f7;
+    padding: 25px;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Custom bullet points for sections */
+#weT, #aqT, #skillsT {
+    list-style: none;
+    padding-left: 0;
+    color: #2D3748;
+}
+
+#weT li, #aqT li, #skillsT li {
+    padding: 7px 0;
+    border-bottom: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+}
+
+#weT li::before, #aqT li::before, #skillsT li::before {
+    content: '∘';
+    font-size: 1.7rem;
+    color: #3182ce;
+    margin-right: 12px;
+}
+
+/* Buttons */
+button {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    background-color: #63B3ED;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3182ce;
+}
+
+/* Print Button */
+.btn.background {
+    background-color: #2B2D42;
+    border-color: #2B2D42;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 220px;
+}
+
+@media print {
+    /* Hide print button and form when printing */
+    .btn.background, #cv-form {
+        display: none;
+    }
+
+    /* Ensure the full CV layout is shown in the PDF */
+    body {
+        background-color: white;
+    }
+
+    #cv-template {
+        page-break-inside: avoid;
+    }
+
+    /* Page break for long content */
+    .card {
+        page-break-inside: avoid;
+    }
+}
+
+.btn.background:hover {
+    background-color: #1F2530;
+}
+
+/* Responsive Design for Button */
+@media (max-width: 768px) {
+    .btn.background {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    #cv-template h1 {
+        font-size: 2.2rem;
+    }
+}
